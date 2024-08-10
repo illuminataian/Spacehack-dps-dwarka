@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Management</title>
+    <link rel="stylesheet" href="food.css">
+</head>
+<body>
+    <header>
+        <h1>Food Management</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="food.html">Food Management</a>
+        </nav>
+    </header>
+    
+    <main id="food-management">
+        <h2>Manage Your Food Inventory</h2>
+        <form id="food-form">
+            <label for="food-name">Food Item:</label>
+            <input type="text" id="food-name" required>
+            <label for="food-quantity">Quantity (kg):</label>
+            <input type="number" id="food-quantity" step="0.01" required>
+            <label for="food-expiry">Expiry Date:</label>
+            <input type="date" id="food-expiry" required>
+            <button type="submit">Add Food Item</button>
+        </form>
+        <table id="food-list">
+            <!-- Table content will be populated by JavaScript -->
+        </table>
+    </main>
+
+    <script src="food.js"></script>
+</body>
+</html>

@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <td>${food.quantity.toFixed(2)} kg</td>
                 <td>${food.expiry}</td>
                 <td>
-                    <button onclick="removeFoodQuantity(${index})">Remove Quantity</button>
-                    <button onclick="removeFoodItem(${index})">Remove Item</button>
+                    <button class="custom-btn btn-6" onclick="removeFoodQuantity(${index})" >Remove Quantity</button>
+                    <button class="custom-btn btn-6" onclick="removeFoodItem(${index})">Remove Item</button>
                 </td>
             `;
 

@@ -1,13 +1,14 @@
- document.addEventListener("DOMContentLoaded", function() {
-    // Initial resource levels (in percentage)
-    let oxygenLevel = 100;
-    let waterLevel = 100;
-    let fuelLevel = 100;
 
-    // Consumption rates (percentage per second)
-    const oxygenConsumptionRate = 0.5;
-    const waterConsumptionRate = 0.3;
-    const fuelConsumptionRate = 0.2;
+document.addEventListener("DOMContentLoaded", function() {
+    // Initial resource levels with random values between 50% and 100%
+    let oxygenLevel = Math.random() * 50 + 50;
+    let waterLevel = Math.random() * 50 + 50;
+    let fuelLevel = Math.random() * 50 + 50;
+
+    // Base consumption rates (percentage per second)
+    const baseOxygenConsumptionRate = 0.5;
+    const baseWaterConsumptionRate = 0.3;
+    const baseFuelConsumptionRate = 0.2;
 
     // Elements to update
     const oxygenBar = document.getElementById('oxygen-bar');
@@ -66,12 +67,48 @@
         }
     });
 
+    // Function to get a random fluctuation that can be positive or negative
+    function getRandomFluctuation(rate) {
+        // Random fluctuation between -0.2 and +0.2
+        const fluctuation = (Math.random() - 0.5) * 3;
+        return rate + fluctuation;
+    }
+
+    // Function to get random resource change
+    function getRandomResourceChange() {
+        // Randomly decide to either increase or decrease
+        return (Math.random() < 0.5 ? 1 : -1) * (Math.random() * 0.5);
+    }
+
     // Function to update resource levels and bars
     function updateResources() {
+        // Apply random fluctuations to the consumption rates
+        const oxygenConsumptionRate = getRandomFluctuation(baseOxygenConsumptionRate)+0.1;
+        const waterConsumptionRate = getRandomFluctuation(baseWaterConsumptionRate)+0.2;
+        const fuelConsumptionRate = getRandomFluctuation(baseFuelConsumptionRate)*0.1 +0.5;
+
+        // Random resource change
+        const oxygenChange = getRandomResourceChange();
+        const waterChange = getRandomResourceChange();
+        const fuelChange = getRandomResourceChange();
+
         // Update levels
         oxygenLevel -= oxygenConsumptionRate;
         waterLevel -= waterConsumptionRate;
         fuelLevel -= fuelConsumptionRate;
+
+        // Apply random changes
+        oxygenLevel += oxygenChange;
+        waterLevel += waterChange;
+        fuelLevel += fuelChange;
+
+        // Ensure levels do not go below 0 or above 100
+        if (oxygenLevel < 0) oxygenLevel = 0;
+        if (oxygenLevel > 100) oxygenLevel = 100;
+        if (waterLevel < 0) waterLevel = 0;
+        if (waterLevel > 100) waterLevel = 100;
+        if (fuelLevel < 0) fuelLevel = 0;
+        if (fuelLevel > 100) fuelLevel = 100;
 
         // Update the bars
         oxygenBar.style.width = oxygenLevel + "%";
@@ -138,5 +175,3 @@
     // Update resources every second
     setInterval(updateResources, 1000);
 });
-
-

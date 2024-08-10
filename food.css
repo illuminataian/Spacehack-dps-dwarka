@@ -119,7 +119,7 @@ th {
 }
 
 tr.warning {
-    background-color: #5e1c00bb;
+    background-color: #f00510bb;
 }
 
 tr.warning td {
@@ -131,5 +131,5 @@ button.remove {
 }
 
 button.remove:hover {
-    background-color: #c82333;
+    background-color: #f9031c;
 }

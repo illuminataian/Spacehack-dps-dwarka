@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head><title>FAQ</title>
+ <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">  
+<link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+<script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%;height: -100%;" 
+        ></canvas></div>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+            <script>
+                particlesJS.load("particles-js", "particles.json", function () {
+                    console.log("yeah");
+                });
+      </script>        
+    <header>
+        <h1>Food Management</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="food.html">Food Management</a>
+        </nav>
+    </header>
+    <style>
+        header {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Navigation styles */
+nav {
+    margin-top: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #bbb;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+    </style>
+            
+        <button class="accordion"> 
+           <h2><i class="fa-regular fa-circle-question fa-beat" style="color: #663dff; padding-right: 10px;"></i>
+          How can astronauts handle risk of oxygen depletion and system malfunctions?</h2>
+        </button>
+<div class="panel">
+  <p>Use systems that continuously generate oxygen from onboard resources. Incorporate real-time monitoring to track oxygen levels and alert astronauts to low levels. Ensure redundant backup systems are in place for emergencies.
+  </p>
+</div>
+
+<button class="accordion"><h2><i class="fa-regular fa-circle-question fa-beat" style="color: #663dff;padding-right: 10px;"></i>
+    How do astronauts maintain physical health and exercise in space?</h2></button>
+<div class="panel">
+  <p>Muscle atrophy and bone density loss due to lack of gravity.
+    Incorporate regular exercise routines using specially designed equipment such as resistance machines and treadmills. Monitor health metrics and adjust exercise regimens as needed.</p>
+</div>
+
+<button class="accordion"><h2>
+  <i class="fa-regular fa-circle-question fa-beat" style="color: #663dff;padding-right: 10px;"></i>
+  What to eat when protein levels are low?
+</h2></button>
+<div class="panel">
+  <p>Consume high-protein foods or supplements, adjust meal plans, and check for additional supplies.</p>
+</div>
+
+<button class="accordion"><h2>
+  <i class="fa-regular fa-circle-question fa-beat" style="color: #663dff;padding-right: 10px;"></i>
+  How to manage nutrient deficiencies in space?
+</h2></button>
+<div class="panel">
+  <p> Use supplements, adjust food rations, and consult mission control for medical advice. </p>
+</div>
+
+<button class="accordion"><h2>
+  <i class="fa-regular fa-circle-question fa-beat" style="color: #663dff;padding-right: 10px;"></i>
+  What should astronauts do if oxygen levels are low?
+</h2></button>
+<div class="panel">
+  <p> Activate backup oxygen systems, check for leaks, minimize activity, and inform mission control.</p>
+</div>
+
+<button class="accordion"><h2>
+  <i class="fa-regular fa-circle-question fa-beat" style="color: #663dff;padding-right: 10px;"></i>
+  How should astronauts handle a low fuel situation?
+</h2></button>
+<div class="panel">
+  <p>Use reserve fuel, reduce fuel consumption, adjust mission operations, and contact mission control. </p>
+</div>
+</center>
+       
+       </section>
+<script>
+ 
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+} 
+ 
+
+       </script>
+
+       
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', 'impacts.json',
+      function(){
+          console.log("particles.json loaded...");
+      });
+  </script>
+       <footer class="footer" style="background-color: #663dff;">
+        <div class="footer-content">
+          <p class="footerText">&copy; Delhi Public School Noida</p>
+        </div>
+      </footer>
+  
+       </body></html>

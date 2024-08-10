@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResourceFlow - Space Resource Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ResourceFlow Dashboard</h1>
+        <br>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="food.html">Food Management</a>
+        </nav>
+        <br>
+    </header>
+    <h1>ResourceFlow</h1>
+    <div id="dashboard">
+        <div class="resource">
+            <h2>Oxygen</h2>
+            <div id="oxygen-bar" class="resource-bar"></div>
+            <p id="oxygen-level">Level: 100%</p>
+            <button id="oxygen-btn" class="custom-btn btn-6">Add Oxygen</button>
+        </div>
+        <div class="resource">
+            <h2>Water</h2>
+            <div id="water-bar" class="resource-bar"></div>
+            <p id="water-level">Level: 100%</p>
+            <button id="water-btn"  class="custom-btn btn-6">Add Water</button>
+        </div>
+        <div class="resource">
+            <h2>Fuel</h2>
+            <div id="fuel-bar" class="resource-bar"></div>
+            <p id="fuel-level">Level: 100%</p>
+            <button id="fuel-btn" class="custom-btn btn-6">Add Fuel</button>
+        </div>
+    </div>
+    
+    <canvas id="resourceChart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
